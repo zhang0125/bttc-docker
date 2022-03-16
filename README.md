@@ -97,7 +97,7 @@ docker-compose -f bttc-sentry-without-snapshotting.yml --env-file testnet-1029.e
 Note - If your docker-compose doesn't support `--env-file` flag, then copy testnet-1029.env/mainnet-199.env to `.env` and run the following command
 
 
-4.For checking the status of delivery use the following api
+5.For checking the status of delivery use the following api
 ```
 http://localhost:26657/status
 ```
