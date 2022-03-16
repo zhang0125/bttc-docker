@@ -94,6 +94,16 @@ Example(do not use snapshots,in testnetnet):
 docker-compose -f bttc-sentry-without-snapshotting.yml --env-file testnet-1029.env up
 ```
 
+Example(do not use snapshots,in mainnet):
+```
+docker-compose -f bttc-sentry-without-snapshotting.yml --env-file mainnet-199.env up
+```
+
+Example(use snapshots,in testnetnet):
+```
+docker-compose -f bttc-sentry-with-snapshotting.yml --env-file testnet-1029.env up
+```
+
 Note - If your docker-compose doesn't support `--env-file` flag, then copy testnet-1029.env/mainnet-199.env to `.env` and run the following command
 
 
