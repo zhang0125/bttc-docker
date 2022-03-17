@@ -71,8 +71,9 @@ In `mainnet-199.env`, change the following:
 
 4.For setting up nodes:
 ```
-docker-compose -f bttc-sentry-without-snapshotting.yml --env-file <env-file> up
+docker-compose -f docker_compose_file --env-file <env-file> up
 ```
+
 Example(use snapshots,in mainnet):
 ```
 docker-compose -f bttc-sentry-with-snapshotting.yml --env-file mainnet-199.env up
