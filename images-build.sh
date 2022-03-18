@@ -1,8 +1,8 @@
 #---------------------bttc---------------------
 BTTC_VERSION=$1
 # use our github folder
-mkdir -p ~/github
-cd ~/github
+mkdir -p github
+cd github
 
 # Clone the repo
 git clone https://github.com/bttcprotocol/bttc.git
@@ -16,7 +16,7 @@ docker build --tag bttc:$BTTC_VERSION .
 
 #---------------------delivery---------------------
 DELIVERY_VERSION=$2
-cd ~/github
+cd github
 # Clone the repo
 git clone https://github.com/bttcprotocol/delivery.git
 cd delivery

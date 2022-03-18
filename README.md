@@ -31,7 +31,7 @@ Run the following commands for local volumes to be mounted in docker-compose fil
 ```
 mkdir -p delivery/scripts
 
-mv delivery-startup.sh delivery/scripts
+cp delivery-startup.sh delivery/scripts
 ```
 
 Modify the env file. 
@@ -41,8 +41,6 @@ Modify the env file.
 Open for editing `vim mainnet-199.env`:
 * #`DELIVERY_TAG` — lastest delivery release tag,make sure this tag should be same as your delivery docker images version mentioned above.
 * `DELIVERY_TAG=v1.0.0`
-* #`DELIVERY_SEEDS` — seeds to sync from delivery fullnodes.
-* `DELIVERY_SEEDS="161c2cbe07fccc8c8a3b10ccdea608569a202c06@54.157.35.210:26656,f3f21c82c04003e3c6ee14eb4d11d5dd0b1f201e@107.20.250.182:26656"`
 * #`BTTC_TAG` — latest bttc release tag.make sure this tag should be same as your bttc docker images version mentioned above. 
 * `BTTC_TAG=v1.0.1`
 
@@ -51,8 +49,6 @@ Open for editing `vim mainnet-199.env`:
 Open for editing `vim testnet-1029.env`:
 * #`DELIVERY_TAG` — lastest delivery release tag,make sure this tag should be same as your delivery docker images version mentioned above. 
 * `DELIVERY_TAG=v1.0.0`
-* #`DELIVERY_SEEDS` — seeds to sync from delivery fullnodes. 
-* `DELIVERY_SEEDS="3f562eed0fcfabc848db5ebed81633e340352c0c@52.53.72.234:26656,7ece43f437d4dc419bdf9c09604ebed084699779@54.215.2.221:26656"`
 * #`BTTC_TAG` — latest bttc release tag.make sure this tag should be same as your bttc docker images version mentioned above.  
 * `BTTC_TAG=v1.0.1`
 
@@ -82,10 +78,10 @@ wget -c https://bttc-blockchain-snapshots.s3-accelerate.amazonaws.com/bttc-mainn
 ```
 then execute follow commands.
 ```
-mkdir -p bttc/snapshot
-mkdir -p delivery/snapshot
-mv <path-to-delivery-snapshot-file> delivery/snapshot
-mv <path-to-bttc-snapshot-file> bttc/snapshot
+mkdir -p bttc/snapshots
+mkdir -p delivery/snapshots
+mv <path-to-delivery-snapshot-file> delivery/snapshots
+mv <path-to-bttc-snapshot-file> bttc/snapshots
 ```
 Note - please make sure to download the snapshot files to the right place.
 

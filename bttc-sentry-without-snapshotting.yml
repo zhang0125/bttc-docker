@@ -54,7 +54,7 @@ services:
         && sed -i '/--bor.heimdall/c\  --bor.heimdall \"http://delivery0:1317\"\\\' start.sh \
         && sed -i '/--metrics/c\  --bootnodes \"${BTTC_BOOTNODES}\" \\\' start.sh \
         && cat start.sh \
-        && sh start.sh 0xa8fe2c741ca635b1f2bd3f6000d195241568c521 > /root/logs/bttc.log 2>&1 &
+        && sh start.sh > /root/logs/bttc.log 2>&1
       "
     networks:
       devnet-network:
