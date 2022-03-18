@@ -22,7 +22,7 @@ sh images-build.sh $BTTC_VERSION $DELIVERY_VERSION
 ```
 Example:
 ```
-sh images-build.sh v1.0.0 v1.0.1
+sh images-build.sh v1.0.1 v1.0.0
 ```
 
 
