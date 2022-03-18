@@ -74,7 +74,7 @@ services:
       "
     networks:
       devnet-network:
-          ipv4_address: 172.20.1.101
+          ipv4_address: 172.20.1.100
     volumes:
       - ./bttc/:/root/.bttc
       - ./bttc/logs:/root/logs
